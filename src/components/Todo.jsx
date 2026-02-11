@@ -4,14 +4,14 @@ function Todo({ todos, deletetodo }) {
   return (
     <div>
       {todos && (
-        <div>
+        <ul>
           {todos.map((item, idx) => (
-            <div key={idx}>
+            <li key={idx}>
               {item}
               <button onClick={() => deletetodo(idx)}>Delete</button>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   );
